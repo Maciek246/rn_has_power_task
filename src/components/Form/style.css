@@ -1,0 +1,26 @@
+.form{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgb(204, 255, 213);
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.field{
+    width: 20%;
+    height: 70%;
+    align-self: center;
+    border-radius: 5%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.submitBtn{
+    width: 30%;
+    border-radius: 30%;
+    height: 70%;
+    align-self: center;
+}

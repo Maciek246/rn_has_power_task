@@ -1,0 +1,8 @@
+.gallery{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
