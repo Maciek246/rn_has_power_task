@@ -11,24 +11,23 @@ class FormContainer extends React.Component{
     }
     
     typeHandler = (e) => {
-        if(e.target.value === 'random'){
-            let animals = ['birds', 'cats', 'shibes']
-            let index = Math.floor(Math.random() * animals.length)
-            this.setState({type: animals[index]});
-        }
-        else{
-            this.setState({type: e.target.value});
-        }
+        this.setState({type: e.target.value});
     }
     
     countHandler = (e) => {
-        this.setState({count: e.target.value});
+        if(e.target.value > 10){
+            this.setState({count: 10});
+        }
+        else if(e.target.value < 1){
+            this.setState({count: 1});
+        }
+        else this.setState({count: e.target.value});
+        
     }
     
     sendRequest = (e) => {
         e.preventDefault();
         this.props.fetch_photos(this.state.type, this.state.count);
-        console.log(this.props.photos);
     }
     
     render(){

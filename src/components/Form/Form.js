@@ -10,7 +10,7 @@ class Form extends React.Component{
         return (
             <div>
                 <form className="form">
-                    <input className="field" type="number" min="1" max="10" placeholder="1" onChange={countHandler}/>
+                    <input className="field" type="number" min={1} max={10} placeholder="1" onChange={countHandler}/>
                     <select className="field" name="animalsType" onChange={typeHandler}>
                         <option value="cats" default>Koty</option>
                         <option value="shibes">Psy</option>
@@ -18,7 +18,7 @@ class Form extends React.Component{
                         <option value="random">Losowo</option>
                     </select>
                     <button className="submitBtn" disabled={status} onClick={sendRequest}>
-                        {status?'Ładowanie danych':'Szukaj'}
+                        {status?'ŁADOWANIE DANYCH':'SZUKAJ'}
                     </button>
                    
                 </form>
@@ -32,7 +32,5 @@ const mapStateToProps = (state) => {
         status: state.fetching
     }
 }
-
-
 
 export default connect(mapStateToProps, null)(Form);
